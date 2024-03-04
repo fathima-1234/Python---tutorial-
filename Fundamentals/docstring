@@ -1,0 +1,12 @@
+def add_numbers(a, b):
+    """
+    This function takes two numbers as arguments and returns their sum.
+
+    Parameters:
+    a (int): The first number.
+    b (int): The second number.
+
+    Returns:
+    int: The sum of the two numbers.
+    """
+    return a + b

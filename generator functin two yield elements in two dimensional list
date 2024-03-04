@@ -1,0 +1,19 @@
+def generate_2d_list(rows, columns):
+    for i in range(rows):
+        row = []
+        for j in range(columns):
+            # Yield elements, you can modify this part as per your requirement
+            yield f"Element({i+1}, {j+1})"
+            # Alternatively, you can yield a tuple or a list with row and column indices
+            # yield (i, j)
+
+# Example usage:
+rows = 3
+columns = 4
+
+# Create a generator object
+generator = generate_2d_list(rows, columns)
+
+# Iterate over the generated elements
+for element in generator:
+    print(element)

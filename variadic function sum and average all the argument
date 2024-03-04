@@ -1,0 +1,9 @@
+def sum_and_average(*args):
+    total = sum(args)
+    average = total / len(args) if len(args) > 0 else 0
+    return total, average
+
+# Example usage:
+result_sum, result_avg = sum_and_average(1, 2, 3, 4, 5)
+print("Sum:", result_sum)
+print("Average:", result_avg)

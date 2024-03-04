@@ -1,0 +1,18 @@
+def repeatnumber(list):
+    max = 0
+    
+    for i in range(len(list) - 1):
+        count = 0
+        for j in range(len(list)):
+            if list[i] == list[j]:
+                count += 1
+                if count > max:
+                    max = count
+                    k = list[i]
+    return max,k
+
+
+
+list = [3,6,4,3,6,3]
+max,k = repeatnumber(list)
+print(f'{k} repeating {max} times')

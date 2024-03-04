@@ -1,0 +1,114 @@
+hello ="hii"
+world = "world"
+print(hello+ " " +world)
+
+
+# Mixing operators between numbers and strings is not supported:
+# This will not work!
+one = 1
+two = 2
+hello = "hello"
+
+print(one + two + hello)
+# in list
+
+strings = []
+names = ["John", "Eric", "Jessica"]
+strings.append("hello")
+strings.append("world")
+
+second_name = names[1]
+
+# this code should write out the filled arrays and the second name in the names list (Eric).
+
+print(strings)
+print("The second name on the names list is %s" % second_name)
+
+# Python also supports multiplying strings to form a string with a repeating sequence:
+lotsofhellos = "hello" * 10
+print(lotsofhellos)
+
+# string formating
+# This prints out "John is 23 years old."
+name = "John"
+age = 23
+print("%s is %d years old." % (name, age))
+
+# general syntax for string slicing is:
+
+
+string[start:end:step]
+
+text = "Hello, World!"
+
+# Extract a portion of the string from index 0 to 5 (excluding index 5)
+substring1 = text[0:5]  # Result: "Hello"
+
+# If you omit the start index, it defaults to 0
+substring2 = text[:5]   # Result: "Hello"
+
+# Extract a portion of the string from index 7 to the end
+substring3 = text[7:]   # Result: "World!"
+
+# Using negative indices to count from the end of the string
+substring4 = text[-6:]  # Result: "World!"
+
+# Slice with a step of 2 (every second character)
+substring5 = text[::2]  # Result: "Hlo ol!"
+
+# Reverse the string
+substring6 = text[::-1] # Result: "!dlroW ,olleH"
+
+
+
+astring = "Hello world!"
+print(astring.upper())
+print(astring.lower())
+
+astring = "Hello world!"
+print(astring.startswith("Hello"))
+print(astring.endswith("asdfasdfasdf"))
+
+# This splits the string into a bunch of strings grouped together in a list. Since this example splits at a space, the first item in the list will be "Hello", and the second will be "world!".
+astring = "Hello world!"
+afewwords = astring.split(" ")
+
+# problem
+s = "Strings are awesome!"
+# Length should be 20
+print("Length of s = %d" % len(s))
+
+# First occurrence of "a" should be at index 8
+print("The first occurrence of the letter a = %d" % s.index("a"))
+
+# Number of a's should be 2
+print("a occurs %d times" % s.count("a"))
+
+# Slicing the string into bits
+print("The first five characters are '%s'" % s[:5]) # Start to 5
+print("The next five characters are '%s'" % s[5:10]) # 5 to 10
+print("The thirteenth character is '%s'" % s[12]) # Just number 12
+print("The characters with odd index are '%s'" %s[1::2]) #(0-based indexing)
+print("The last five characters are '%s'" % s[-5:]) # 5th-from-last to end
+
+# Convert everything to uppercase
+print("String in uppercase: %s" % s.upper())
+
+# Convert everything to lowercase
+print("String in lowercase: %s" % s.lower())
+
+# Check how a string starts
+if s.startswith("Str"):
+    print("String starts with 'Str'. Good!")
+
+# Check how a string ends
+if s.endswith("ome!"):
+    print("String ends with 'ome!'. Good!")
+
+# Split the string into three separate strings,
+# each containing only a word
+print("Split the words of the string: %s" % s.split(" "))
+
+
+print("I love %s in %s" % ("programming", "Python")) # templating strings
+# 'I love programming in Python'

@@ -1,0 +1,12 @@
+def get_full_name(first_name, middle_name, last_name):
+    # Concatenate the names with spaces
+    full_name = f"{first_name} {middle_name} {last_name}"
+    return full_name
+
+# Example usage:
+first = "John"
+middle = "Doe"
+last = "Smith"
+
+result = get_full_name(first, middle, last)
+print(result)  # Output: John Doe Smith

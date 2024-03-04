@@ -1,0 +1,6 @@
+def fun(n):
+    return lambda a:a*a*n
+
+result = fun(5)
+print(result(3))
+

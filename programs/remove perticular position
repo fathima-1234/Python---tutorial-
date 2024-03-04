@@ -1,0 +1,16 @@
+my_list = [1, 2, 3, 4, 5]
+
+# Ask the user for the position to remove
+position = int(input("Enter the position to remove (0 to {}): ".format(len(my_list) - 1)))
+
+if position < 0 or position >= len(my_list):
+    print("Invalid position!")
+else:
+    # Remove and return the element at the specified position
+    
+    removed_element = my_list.pop(position)
+    print("Removed element:", removed_element)
+    # Delete element at the specified position
+    # del my_list[position]
+
+print("Updated list:", my_list)

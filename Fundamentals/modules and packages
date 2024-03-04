@@ -1,0 +1,62 @@
+
+'''Modules in Python are just Python files with a .py extension. 
+The name of the module is the same as the file name. 
+A Python module can have a set of functions,
+classes, or variables defined and implemented'''
+# Modules are imported from other modules using the import command.
+'''You may have noticed that when importing a module, a .pyc file is created. 
+This is a compiled Python file.
+ Python compiles files into Python bytecode so that it won't have to parse the files each time modules are loaded.
+  If a .pyc file exists, it gets loaded instead of the .py file.
+This process is transparent to the user.'''
+
+from draw import draw_game
+from draw import *
+from draw import draw_game as draw  #custom import name
+
+'''Extending module load path
+There are a couple of ways to tell the Python interpreter where to look for modules,
+aside from the default local directory and built-in modules. 
+You can use the environment variable PYTHONPATH to specify additional directories to look for modules like this:'''
+# PYTHONPATH=/foo python game.py
+
+# We can look for which functions are implemented in each module by using the dir function:
+import urllib
+dir(urllib)
+['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', 
+'__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', 
+'_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', 
+'_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', 
+'_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', 
+'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', 
+'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', 
+'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', 
+'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', 
+'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', 
+'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', 
+'urlopen', 'urlretrieve']
+
+# When we find the function in the module we want to use, we can read more about it with the help function, using the Python interpreter:
+help(urllib.urlopen)
+
+'''Writing packages
+Packages are namespaces containing multiple packages and modules. They're just directories, but with certain requirements.
+
+Each package in Python is a directory which MUST contain a special file called __init__.py. This file, which can be empty, indicates that the directory it's in is a Python package. That way it can be imported the same way as a module.
+
+If we create a directory called foo, which marks the package name, we can then create a module inside that package called bar. Then we add the __init__.py file inside the foo directory.
+
+To use the module bar, we can import it in two ways:'''
+import foo.bar
+from foo import bar
+
+
+import re
+
+# Your code goes here
+find_members = []
+for member in dir(re):
+    if "find" in member:
+        find_members.append(member)
+
+print(sorted(find_members))

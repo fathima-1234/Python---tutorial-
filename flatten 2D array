@@ -1,0 +1,15 @@
+def flatten_array(arr):
+    flattened = []
+
+    for item in arr:
+        if isinstance(item, list):
+            flattened.extend(flatten_array(item))
+        else:
+            flattened.append(item)
+
+    return flattened
+
+# Test the function
+arr = [1, [2, 3], [4, [5, 6]], 7, [8, 9, [10, 11]]]
+flattened_arr = flatten_array(arr)
+print(flattened_arr)

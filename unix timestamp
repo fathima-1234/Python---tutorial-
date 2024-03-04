@@ -1,0 +1,6 @@
+import time
+
+# Get the current Unix timestamp
+current_timestamp = int(time.time())
+
+print("Current Unix timestamp:", current_timestamp)

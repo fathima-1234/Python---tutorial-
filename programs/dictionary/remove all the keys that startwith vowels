@@ -1,0 +1,10 @@
+def remove_keys_starting_with_vowels(my_dict):
+    vowels = "aeiouAEIOU"
+    return {key: value for key, value in my_dict.items() if not key[0] in vowels}
+
+# Example usage:
+my_dictionary = {'apple': 1, 'banana': 2, 'orange': 3, 'pear': 4, 'grape': 5}
+filtered_dictionary = remove_keys_starting_with_vowels(my_dictionary)
+
+print("Original Dictionary:", my_dictionary)
+print("Filtered Dictionary:", filtered_dictionary)

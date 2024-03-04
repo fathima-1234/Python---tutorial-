@@ -1,0 +1,13 @@
+def gcd(a, b):
+    # first a=18,b=48 then 18%48 = 18,a=48,b=18then 48%18=12 a=18b=12 18%12 =6,then a=12 b =6
+    # 12%6 = 0 a=6 and b=0
+    while b:
+        a, b = b, a % b
+    return a
+
+# Example usage
+num1 = 18
+num2 = 48
+
+result = gcd(num1, num2)
+print(f"The GCD of {num1} and {num2} is: {result}")

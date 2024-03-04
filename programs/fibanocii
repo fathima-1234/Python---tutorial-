@@ -1,0 +1,12 @@
+def fibnocii(n):
+    a,b = 0,1
+    i = 0
+    while(i < n):
+        yield a
+        a,b = b,a+b
+        i += 1
+n = int(input("fibanocii number"))
+for i in fibnocii(n):
+        print(i)
+
+

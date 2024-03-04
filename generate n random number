@@ -1,0 +1,18 @@
+import random
+
+def generate_unique_random_numbers(n, start, end):
+    unique_numbers = set()  # Use a set to store unique numbers
+
+    # Continue generating random numbers until we have 'n' unique numbers
+    while len(unique_numbers) < n:
+        unique_numbers.add(random.randint(start, end))
+
+    return list(unique_numbers)
+
+# Example usage:
+n = 5
+start_range = 1
+end_range = 10
+
+random_numbers = generate_unique_random_numbers(n, start_range, end_range)
+print("Generated random numbers:", random_numbers)

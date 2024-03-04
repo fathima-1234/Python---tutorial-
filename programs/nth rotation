@@ -1,0 +1,25 @@
+def rotation(lst, n):
+   return lst[n:] + lst[:n]
+   
+        
+       
+    
+
+my_list = [3, 5, 4, 2]
+rotation_count = int(input("Enter a number: "))
+result = rotation(my_list, rotation_count)
+print(result)
+
+
+# using deuque
+from collections import deque
+
+def rotate_list(lst, k):
+    d = deque(lst)
+    d.rotate(k)
+    return list(d)
+
+my_list = [1, 2, 3, 4, 5]
+rotation_count = 2
+rotated_list = rotate_list(my_list, rotation_count)
+print(rotated_list)

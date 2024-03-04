@@ -1,0 +1,10 @@
+import random
+
+def generate_otp():
+    # Generate a random 5-digit number
+    otp = random.randint(10000,99999)
+    return otp
+
+# Example usage
+otp_number = generate_otp()
+print("Your OTP:", otp_number)

@@ -1,0 +1,28 @@
+from datetime import datetime
+
+# Get the current date and time
+current_time = datetime.now()
+
+# Format the current time as a string
+formatted_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+
+# Print the formatted time
+print("Current Time:", formatted_time)
+
+import time
+
+# Get the current time in a readable format
+current_time = time.ctime()
+
+# Print the current time
+print("Current Time:", current_time)
+import time
+
+# Get the current time as a struct_time object
+current_time_struct = time.localtime()
+print(current_time_struct)
+# Format the current time as a string
+formatted_time = time.strftime("%H:%M:%S", current_time_struct)
+
+# Print the formatted time
+print("Current Time:", formatted_time)

@@ -1,0 +1,10 @@
+from datetime import datetime, timedelta
+
+# Get the current date and time
+current_date = datetime.now()
+
+# Calculate the date 45 days before the current date
+date_before_45_days = current_date - timedelta(days=45)
+
+# Print the result
+print("Date 45 days before now:", date_before_45_days)

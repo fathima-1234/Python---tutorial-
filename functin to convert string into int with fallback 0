@@ -1,0 +1,15 @@
+def convert_to_int_or_fallback(s, fallback=0):
+    try:
+        result = int(s)
+    except ValueError:
+        result = fallback
+    return result
+
+# Example usage:
+value1 = convert_to_int_or_fallback("42")
+value2 = convert_to_int_or_fallback("not_an_integer")
+value3 = convert_to_int_or_fallback("123", fallback=999)
+
+print(value1)  # Output: 42
+print(value2)  # Output: 0 (fallback value)
+print(value3)  # Output: 123

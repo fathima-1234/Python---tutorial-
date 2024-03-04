@@ -1,0 +1,18 @@
+def prepend_string_decorator(prepend_str):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            # Call the original function
+            result = func(*args, **kwargs)
+            # Prepend the string to the result
+            return prepend_str + str(result)
+        return wrapper
+    return decorator
+
+# Define a function and apply the decorator
+@prepend_string_decorator("Prefix: ")
+def get_value():
+    return 42
+
+# Call the decorated function
+value = get_value()
+print(value)  # Output will be "Prefix: 42"

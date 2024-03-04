@@ -1,0 +1,15 @@
+myDict = {'a':1,'b':2,'c':3,'d':4}
+print(myDict)
+if 'a' in myDict: 
+    del myDict['a']
+print(myDict)
+my_dict = {'data1': 100, 'data2': -54, 'data3': 247, 'data4': 100}
+
+value_to_remove = 100
+
+keys_to_remove = [key for key, value in my_dict.items() if value == value_to_remove]
+
+for key in keys_to_remove:
+    del my_dict[key]
+
+print(my_dict)
