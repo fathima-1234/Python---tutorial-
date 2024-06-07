@@ -1,0 +1,11 @@
+dict = {1:'hello',2:'HII' ,3 : 'HIIHELLO'}
+
+list1 = list(dict.items())
+
+dict.clear()
+
+print(list1)
+for key ,value in list1:
+    dict[value]  = key
+
+print(dict)

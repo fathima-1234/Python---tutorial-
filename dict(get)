@@ -1,0 +1,17 @@
+# List of dictionaries
+list_of_dicts = [
+    {'name': 'Alice', 'age': 30},
+    {'name': 'Bob'},
+    {'name': 'Charlie', 'age': 25, 'city': 'New York'},
+    {'name': 'David', 'city': 'Los Angeles'}
+]
+
+# Key to check for
+key_to_check = 'age'
+
+# Filter dictionaries that do not have the key
+filtered_dicts = [d for d in list_of_dicts if d.get(key_to_check) is None]
+
+# Print the filtered dictionaries
+for d in filtered_dicts:
+    print(d)

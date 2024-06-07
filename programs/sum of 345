@@ -6,3 +6,5 @@ def sumDigits(n):
 
 print(sumDigits(345))
 print(sumDigits(45))
+print(3/5)
+print(3//5)

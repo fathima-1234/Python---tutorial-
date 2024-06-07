@@ -1,0 +1,13 @@
+def permutationstring(string,permutation=''):
+    if len(permutation) == len(string):
+        print(permutation)
+        return
+
+
+    for char in string:
+        if char not in permutation:
+            newpermutation = permutation + char
+            permutationstring(string,newpermutation)
+
+string = "abc"
+permutationstring(string)

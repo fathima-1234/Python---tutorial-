@@ -1,0 +1,9 @@
+# Original dictionary
+original_dict = {'a': 1, 'b': 2, 'c': 3}
+
+# Interchanged dictionary using dictionary comprehension
+interchanged_dict = {value: key for key, value in original_dict.items()}
+
+print("Original Dictionary:", original_dict)
+print("Interchanged Dictionary:", interchanged_dict)
+

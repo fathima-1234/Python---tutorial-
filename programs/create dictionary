@@ -1,0 +1,18 @@
+def convert_to_records(test_list, key_list):
+    # Ensure the length of key_list is at least 1
+    if len(key_list) < 1:
+        raise ValueError("key_list must contain at least one key")
+
+    # Calculate the minimum length of test_list and key_list
+    min_length = min(len(test_list), len(key_list))
+    print(min_length)
+    # Create a list of dictionaries by mapping values from test_list to keys from key_list
+    records = [{key_list[i]: test_list[i]} for i in range(min_length)]
+
+    return records
+
+# Example usage
+test_list = ["Gfg", 3, "is", 8]
+key_list = ["name", "id"]
+output = convert_to_records(test_list, key_list)
+print(output)

@@ -1,0 +1,12 @@
+from collections import Counter
+
+# Define the input sequence of numbers
+input_sequence = "12123123412345"
+
+# Compute the frequency of each digit in the sequence
+digit_counts = Counter(input_sequence)
+
+# Print the frequency of each digit
+print("Frequency of digits:")
+for digit, count in sorted(digit_counts.items()):
+    print(f"Digit {digit}: {count} occurrences")

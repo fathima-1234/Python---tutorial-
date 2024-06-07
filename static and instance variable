@@ -1,0 +1,22 @@
+class Employee:
+    compny = 'hello'
+    def __init__(self,name,age):
+        self.name  = name
+        self.__age = age
+    def get_age(self):
+        return self.__age
+
+
+class Worker(Employee):
+    def __init__(self,name,age,place):
+        super().__init__(name,age)
+        self.place = place
+
+    def printall(self):
+        print(self.name,self.compny,self.get_age(),self.place)
+
+    # def printall(self):
+    #     print(self.name,self.compny,self._Employee__age,self.place)
+
+obj = Worker('ayisha',10,'vatkara')
+obj.printall()

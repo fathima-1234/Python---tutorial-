@@ -1,0 +1,13 @@
+import random
+
+def shuffle_array(arr):
+    n = len(arr)
+    for i in range(n - 1, 0, -1):
+        j = random.randint(0, i)  # Select a random index from 0 to i (inclusive)
+        arr[i], arr[j] = arr[j], arr[i]  # Swap the elements
+    return arr
+
+# Example usage:
+my_array = [1, 2, 3, 4, 5]
+print("Original array:", my_array)
+print("Shuffled array:", shuffle_array(my_array))

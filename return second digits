@@ -1,0 +1,23 @@
+numbers = [1234, 12, 2345]
+
+# Function to extract the second digit (tens place) from an integer
+def extract_second_digit(num):
+
+    lennum = len(str(num)) 
+    lenght = lennum - 2
+    # Check if the number is non-negative and has at least two digits
+    if lennum >= 2:
+        # Remove the units place digit and then extract the last remaining digit
+        second_digit = (num // (10**lenght)) % 10
+        return second_digit
+    else:
+        # Handle cases where the number has less than two digits (return None)
+        return None
+
+# Iterate through each number in the list and print the second digit (tens place)
+for num in numbers:
+    second_digit = extract_second_digit(num)
+    if second_digit is not None:
+        print(second_digit)
+    else:
+        print(f"Number {num} has less than two digits")

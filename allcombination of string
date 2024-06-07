@@ -1,0 +1,17 @@
+def generate_combinations(string, current_combination="", index=0):
+    # Base case: If the current index exceeds the length of the string,
+    # we have generated a valid combination, so print it
+    if index >= len(string):
+        if current_combination:
+            print(current_combination)
+        return
+    
+    # Include the character at the current index in the combination
+    generate_combinations(string, current_combination + string[index], index + 1)
+    
+    # Exclude the character at the current index from the combination
+    generate_combinations(string, current_combination, index + 1)
+
+# Example usage:
+input_string = "abc"
+generate_combinations(input_string)

@@ -1,0 +1,22 @@
+list1 = [2,5,3,4,4,5]
+
+for i in list1:
+    if list1.count(i) >= 2:
+            list1.pop(i)
+            
+
+print(list1)
+
+
+list1 = [2, 5, 3, 4, 4, 5]
+
+# Iterate over the list from end to beginning
+i = len(list1) - 1
+while i > 0:
+    # Check if the current element has duplicates earlier in the list
+    if list1[i] in list1[:i]:
+        # Remove the duplicate element
+        list1.pop(i)
+    i -= 1
+
+print(list1)  # Output: [2, 5, 3, 4]

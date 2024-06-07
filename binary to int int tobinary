@@ -1,0 +1,18 @@
+# Binary string
+binary_string = '1010'
+
+# Convert binary string to decimal number
+decimal_number = int(binary_string, 2)
+
+# Print the decimal number
+print(decimal_number)
+
+
+# Number to convert to binary
+number = 10
+
+# Convert the number to binary representation
+binary_representation = bin(number)
+
+# Print the binary representation
+print(binary_representation)

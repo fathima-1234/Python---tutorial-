@@ -1,0 +1,35 @@
+import React, { useState, useEffect } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  // useEffect hook with cleanup logic
+  useEffect(() => {
+    // Update the document title with the current count
+    document.title = `Count: ${count}`;
+
+    // Cleanup function to reset document title when component unmounts or 'count' changes
+    return () => {
+      document.title = 'React App'; // Reset document title
+    };
+  }, [count]); // Dependency array: useEffect runs when 'count' changes
+
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
+
+  const resetCount = () => {
+    setCount(0);
+  };
+
+  return (
+    <div>
+      <h1>Counter</h1>
+      <p>Count: {count}</p>
+      <button onClick={incrementCount}>Increment</button>
+      <button onClick={resetCount}>Reset</button>
+    </div>
+  );
+};
+
+export default Counter;

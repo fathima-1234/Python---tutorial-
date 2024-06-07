@@ -1,0 +1,19 @@
+def matchcase(sourcestring,targetstring):
+    result = []
+    for source,target in zip(sourcestring,targetstring):
+        if target.islower():
+            result.append(source.lower())
+        elif target.isupper():
+            result.append(source.upper())
+        else:
+            result.append(source)
+
+    if len(source) > len(target):
+        result.append(sourcestring[len(target):])
+
+    return ''.join(result)
+sourcestring = "helloWorld"
+targetstring = "Python"
+matchstring = matchcase(sourcestring,targetstring)
+print(matchstring)
+
